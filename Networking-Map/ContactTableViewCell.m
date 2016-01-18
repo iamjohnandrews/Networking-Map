@@ -13,14 +13,6 @@
 - (void)setContact:(Contact *)contact {
     [self populateTextView:contact];
 }
-/*
- NSString *companyName;
- NSString *parent;
- NSString *name;
- NSArray *managers;
- NSArray *phoneNumbers;
- NSArray *addresses;
-*/
 
 - (void)populateTextView:(Contact *)contact {
     
@@ -57,5 +49,6 @@
 
     return combinedString;
 }
+
 
 @end

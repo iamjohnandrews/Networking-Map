@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MapViewController.h"
 
 static NSString *citrixProjectURL = @"http://nsmith.nfshost.com/sf/contacts.json";
 static NSString *CellIdentifier = @"infoCell";
@@ -71,13 +72,20 @@ static NSString *CellIdentifier = @"infoCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.contact = self.contacts[indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
-#pragma mark Segue Method
+#pragma mark Navigation
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(ContactTableViewCell *)senderCell {
+    if ([segue.identifier isEqualToString:@"toMapSegue"]) {
+        MapViewController *mapViewController = segue.destinationViewController;
+        mapViewController.contact = senderCell.contact;
+        mapViewController.contact.addresses = @[@"701 Corporate Center Drive, Raleigh, NC 27607", @"4140 Parklake Ave #320, Raleigh, NC 27612"];
+    }
+}
 
 
 @end
