@@ -18,18 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7il-zV-sIv">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7il-zV-sIv">
+                                <rect key="frame" x="0.0" y="25" width="600" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" id="dxT-Yu-tYe">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="81" id="dxT-Yu-tYe" customClass="ContactTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dxT-Yu-tYe" id="vtC-WL-vbu">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXR-e2-pLo">
+                                                    <rect key="frame" x="8" y="1" width="584" height="72"/>
+                                                    <color key="backgroundColor" red="1" green="0.96621304419999998" blue="0.043735437330000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BXR-e2-pLo" firstAttribute="centerY" secondItem="vtC-WL-vbu" secondAttribute="centerY" constant="-3" id="S2D-Xa-uYh"/>
+                                                <constraint firstAttribute="bottom" secondItem="BXR-e2-pLo" secondAttribute="bottom" constant="7" id="VQq-8a-9sR"/>
+                                                <constraint firstItem="BXR-e2-pLo" firstAttribute="trailing" secondItem="vtC-WL-vbu" secondAttribute="trailingMargin" id="WU7-fu-CkX"/>
+                                                <constraint firstItem="BXR-e2-pLo" firstAttribute="leading" secondItem="vtC-WL-vbu" secondAttribute="leadingMargin" id="bNe-uj-J06"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="textView" destination="BXR-e2-pLo" id="Z5g-PO-8eT"/>
                                             <segue destination="Z0P-Au-EWS" kind="show" identifier="toMapSegue" id="obm-pm-Shu"/>
                                         </connections>
                                     </tableViewCell>
@@ -38,10 +54,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="7il-zV-sIv" secondAttribute="trailing" constant="-20" id="ZS6-sM-4vE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7il-zV-sIv" secondAttribute="bottom" id="pH3-OF-BCe"/>
-                            <constraint firstItem="7il-zV-sIv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="sec-cV-eRJ"/>
-                            <constraint firstItem="7il-zV-sIv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="xze-Ox-u7O"/>
+                            <constraint firstItem="7il-zV-sIv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1qL-jO-6g1"/>
+                            <constraint firstAttribute="trailing" secondItem="7il-zV-sIv" secondAttribute="trailing" id="Dsk-LQ-jgO"/>
+                            <constraint firstItem="7il-zV-sIv" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="tbi-xu-CNS"/>
+                            <constraint firstItem="7il-zV-sIv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="ybB-cT-NyU"/>
                         </constraints>
                     </view>
                     <connections>

@@ -15,6 +15,8 @@
 		7FD6C30E1C4ABC6300303B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD6C30C1C4ABC6200303B8B /* LaunchScreen.storyboard */; };
 		7FD6C3191C4ABC6300303B8B /* Networking_MapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6C3181C4ABC6300303B8B /* Networking_MapTests.m */; };
 		7FD6C3241C4ABC6300303B8B /* Networking_MapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6C3231C4ABC6300303B8B /* Networking_MapUITests.m */; };
+		7FD6C3381C4B1AF100303B8B /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6C3371C4B1AF100303B8B /* Contact.m */; };
+		7FD6C33C1C4B1B5A00303B8B /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6C33B1C4B1B5A00303B8B /* ContactTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		7FD6C31F1C4ABC6300303B8B /* Networking-MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Networking-MapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD6C3231C4ABC6300303B8B /* Networking_MapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Networking_MapUITests.m; sourceTree = "<group>"; };
 		7FD6C3251C4ABC6300303B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FD6C3361C4B1AF100303B8B /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		7FD6C3371C4B1AF100303B8B /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		7FD6C33A1C4B1B5A00303B8B /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
+		7FD6C33B1C4B1B5A00303B8B /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +109,9 @@
 			children = (
 				7FD6C3011C4ABC6200303B8B /* AppDelegate.h */,
 				7FD6C3021C4ABC6200303B8B /* AppDelegate.m */,
-				7FD6C3041C4ABC6200303B8B /* ViewController.h */,
-				7FD6C3051C4ABC6200303B8B /* ViewController.m */,
+				7FD6C3311C4B162100303B8B /* Model */,
+				7FD6C3391C4B1B3600303B8B /* View */,
+				7FD6C3351C4B1A3300303B8B /* Controller */,
 				7FD6C3071C4ABC6200303B8B /* Main.storyboard */,
 				7FD6C30A1C4ABC6200303B8B /* Assets.xcassets */,
 				7FD6C30C1C4ABC6200303B8B /* LaunchScreen.storyboard */,
@@ -138,6 +145,33 @@
 				7FD6C3251C4ABC6300303B8B /* Info.plist */,
 			);
 			path = "Networking-MapUITests";
+			sourceTree = "<group>";
+		};
+		7FD6C3311C4B162100303B8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FD6C3361C4B1AF100303B8B /* Contact.h */,
+				7FD6C3371C4B1AF100303B8B /* Contact.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7FD6C3351C4B1A3300303B8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FD6C3041C4ABC6200303B8B /* ViewController.h */,
+				7FD6C3051C4ABC6200303B8B /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7FD6C3391C4B1B3600303B8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FD6C33A1C4B1B5A00303B8B /* ContactTableViewCell.h */,
+				7FD6C33B1C4B1B5A00303B8B /* ContactTableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD6C3061C4ABC6200303B8B /* ViewController.m in Sources */,
+				7FD6C3381C4B1AF100303B8B /* Contact.m in Sources */,
+				7FD6C33C1C4B1B5A00303B8B /* ContactTableViewCell.m in Sources */,
 				7FD6C3031C4ABC6200303B8B /* AppDelegate.m in Sources */,
 				7FD6C3001C4ABC6200303B8B /* main.m in Sources */,
 			);
