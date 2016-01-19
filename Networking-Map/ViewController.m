@@ -83,9 +83,10 @@ static NSString *CellIdentifier = @"infoCell";
     if ([segue.identifier isEqualToString:@"toMapSegue"]) {
         MapViewController *mapViewController = segue.destinationViewController;
         NSUInteger selectedRow = [[self.tableView indexPathForCell:sender] row];
-        
+        sender.selected = NO;
         mapViewController.contact = self.contacts[selectedRow];
         mapViewController.contact.addresses = @[@"701 Corporate Center Drive, Raleigh, NC 27607", @"4140 Parklake Ave #320, Raleigh, NC 27612"];
+        // Ensures all contacts have an address
     }
 }
 

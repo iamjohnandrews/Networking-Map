@@ -10,8 +10,6 @@
 #import "Contact.h"
 
 @interface ContactTableViewCell : UITableViewCell
-
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
 @property (strong, nonatomic) Contact *contact;
 @end

@@ -10,10 +10,6 @@
 
 static NSString *citrixName = @"Citrix";
 
-@interface MapViewController () <MKMapViewDelegate>
-
-@end
-
 @implementation MapViewController
 
 - (void)viewDidLoad {
@@ -34,6 +30,7 @@ static NSString *citrixName = @"Citrix";
     myAnnotation.coordinate = zoomLocation;
     myAnnotation.title = self.contact.companyName ? self.contact.companyName : self.contact.name;
     myAnnotation.subtitle = self.contact.addresses.lastObject;
+    // take the last object just so real address is displayed
     
     [self.mapView addAnnotation:myAnnotation];
 }
