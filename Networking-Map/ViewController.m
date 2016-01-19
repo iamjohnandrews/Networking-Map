@@ -79,10 +79,12 @@ static NSString *CellIdentifier = @"infoCell";
 
 #pragma mark Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(ContactTableViewCell *)senderCell {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(ContactTableViewCell *)sender {
     if ([segue.identifier isEqualToString:@"toMapSegue"]) {
         MapViewController *mapViewController = segue.destinationViewController;
-        mapViewController.contact = senderCell.contact;
+        NSUInteger selectedRow = [[self.tableView indexPathForCell:sender] row];
+        
+        mapViewController.contact = self.contacts[selectedRow];
         mapViewController.contact.addresses = @[@"701 Corporate Center Drive, Raleigh, NC 27607", @"4140 Parklake Ave #320, Raleigh, NC 27612"];
     }
 }
